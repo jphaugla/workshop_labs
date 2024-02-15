@@ -1,9 +1,11 @@
 #?/bin/bash
 
-export CRDB_VERSION="cockroachdb/cockroach:v21.2.4"
+export CRDB_VERSION="cockroachdb/cockroach:latest"
 export COMPANY=""
 export ENTKEY=""
+export XDG_CONFIG_HOME="/mnt"
+export XDG_DATA_HOME="/mnt"
 
-docker compose up --detach
+podman-compose up -d
 
 sleep 120

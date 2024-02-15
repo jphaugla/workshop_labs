@@ -1,7 +1,7 @@
 #?/bin/bash
 
-export CRDB_VERSION="cockroachdb/cockroach:v21.2.4"
+export CRDB_VERSION="cockroachdb/cockroach:latest"
 export COMPANY=""
 export ENTKEY=""
 
-docker compose down
+podman-compose down
