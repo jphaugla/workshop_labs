@@ -1,6 +1,6 @@
 #?/bin/bash
 
-export CRDB_VERSION="cockroachdb/cockroach:latest"
+export CRDB_VERSION="docker.io/cockroachdb/cockroach:latest"
 export COMPANY=""
 export ENTKEY=""
 

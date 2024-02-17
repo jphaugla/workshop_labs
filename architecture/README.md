@@ -4,18 +4,27 @@ The following labs will take you through various query tuning scenarios and allo
 
 ## Labs Prerequisites
 
-1. Docker compose
-2. Cockroach binary on Mac or Windows
-3. A modern web browser
-4. A commandline client:
+### Use one of the following three
+* Docker compose 
+* Cockroach binary on Mac or Windows
+* Cloud instance with cockroachDB installed
+* A modern web browser
+. A commandline client:
     - Terminal (MacOS/Linux)
     - Powershell (Windows)
 
 ## Lab 0 - Start up a cluster
+### Option 1 is docker
 Go to infrastructure/single-region-dockercompose-cluster directory
 Update cockroach version and license information in docker.sh then start Cockroach cluster on docker via docker compose
 ```bash
 ./docker-up.sh
+```
+### OPtion 2 is use cloud instance
+* Log into the cloud resource
+* Start the cockroach instance
+```bash
+cockroach start-single-node --insecure --listen-addr=localhost:36257 --sql-addr=localhost:26257 --background
 ```
 
 ## Lab 1 - Validate cluster regions and the node that we connected to
